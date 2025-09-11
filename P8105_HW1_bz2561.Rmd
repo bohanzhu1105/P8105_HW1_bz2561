@@ -1,0 +1,25 @@
+---
+title: "HW1"
+author: "Bohan Zhu"
+date: "2025-09-11"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Problem 1
+```{r}
+library(moderndive)
+data("early_january_weather")
+```
+
+```{r}
+names(early_january_weather)
+nrow(early_january_weather)
+ncol(early_january_weather)
+mean(early_january_weather$temp)
+```
+
+There are 15 variables in this dataset, which are . There are 358 data points in the data. Besides, the average temperature is 39.58 F.
