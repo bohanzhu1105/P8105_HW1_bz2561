@@ -14,14 +14,14 @@ library(ggplot2)
 library(tidyverse)
 ```
 
-# Problem 1
+## Problem 1
 ```{r}
 library(moderndive)
 data("early_january_weather")
 ```
 
 
-The dataset shows hourly meteorological data for LGA, JFK, and EWR for the month of January 2013. There are `r ncol(early_january_weather)` variables in this dataset, which are `r colnames(early_january_weather)`. There are `r nrow(early_january_weather)` data points in the data. Besides, the average temperature is `r mean(early_january_weather$temp)` F.
+The dataset shows hourly meteorological data for LGA, JFK, and EWR for the month of January 2013. \ There are `r ncol(early_january_weather)` variables in this dataset, which are `r colnames(early_january_weather)`. \ `origin` represents the weather station. `year`, `month`, `day`, `hour` represents the time of recording. `temp` and `dewp` represents temperature and dewpoint in F. `humid` means relative humidity. `wind_dr`, `wind_speed`, and `wind_gust` shows wind direction (in degrees), speed, and gust speed (in mph). `precip` indicates precipitation, in inches. `presure` calculates sea level pressure in millibars. `visib` shows visibility in miles, and lastely `time_hour` represents the date and hour of the recording as a POSIXct date. \ There are `r nrow(early_january_weather)` data points in the data. \ Besides, the average temperature is `r mean(early_january_weather$temp)` F.
 
 ```{r}
 ggplot(data = early_january_weather, 
@@ -33,7 +33,7 @@ ggplot(data = early_january_weather,
 ggsave("scatter_plot.pdf",height = 4,width = 6)
 ```
 
-# Problem 2
+## Problem 2
 ```{r}
 set.seed(123)
 df1 =
