@@ -33,6 +33,7 @@ ggplot(data = early_january_weather,
            color = humid)) + 
   geom_point()
 ```
+
 From the scatter plot, we observe a clear upward trend in temperature over the first two weeks of January, with noticeable daily fluctuations. Despite these short-term variations, the overall pattern indicates steady warming. The humidity color scale does not reveal a strict pattern, as both high and low humidity values appear in the early and later periods. However, lower humidity tends to cluster around lower temperatures, while higher humidity is more frequently associated with higher temperatures.
 
 ```{r}
@@ -54,6 +55,7 @@ df1 =
 
 df1
 ```
+
 We can see that we can take the mean for numerical variable and logical variable. We can not take the mean for character variable or factor variable. 
 ```{r}
 mean(pull(df1, vec_numeric))
@@ -61,7 +63,8 @@ mean(pull(df1, vec_logical))
 mean(pull(df1, vec_character))
 mean(pull(df1, vec_factor))
 ```
-When we apply as.numeric, we can see that logical vector converted into 0s and 1s now. 0 represents `FALSE` and 1 represents `TRUE`. Hence, is possible to treat a logical variable as a numerical variable. This is the reason why we may take the mean of a logcial variable. \
+
+When we apply `as.numeric`, we can see that logical vector converted into 0s and 1s now. 0 represents `FALSE` and 1 represents `TRUE`. Hence, is possible to treat a logical variable as a numerical variable. This is the reason why we may take the mean of a logcial variable. \
 For a character variable, converting it directly to numeric produces `NA`s. That is reasonable because character can be anything. Here, an arbitrary text deos not have a numeric mapping. \
 Finally, for factor vairable, we can see that data now becomes 1 or 2 or 3 because we assign three levels to the data. Here 1 means Business, 2 means Humanities, and 3 means STEM. However, taking the mean for factor variable doesn't have any practical meaning. Becuase the codes are arbitrary labels instead of quantities with meaningful numerical relationships.
 ```{r, eval=FALSE}
